@@ -1,0 +1,37 @@
+<html>
+    <head>
+    </head>
+<body>
+    <img src="../images/1.jpg" name="coolBtn"  
+         onmouseover="changeImage(1);"  
+         onmouseout="changeImage(0);"  
+         onmousedown="changeImage(2);"  
+         onmouseup="changeImage(1);" />
+	     
+    <script type="text/javascript">
+        var count = 0;
+        var path = new Array ("../images/1.jpg", "../images/2.jpg", "../images/3.jpg");
+        var img = new Array ();
+        for (var i=0; i < path.length; i++) {
+            img[i] = new Image (202, 42);			
+            img[i].onload = countImages;
+            img[i].src = path[i];
+        }
+        		
+        function countImages () {
+            count++;
+        }
+		
+        function changeImage (index) {
+            if (count == img.length)
+                document.images["coolBtn"].src = img[index].src;
+        }
+		
+    </script>
+</body>
+
+
+
+
+</html>
+
