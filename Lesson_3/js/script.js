@@ -32,7 +32,7 @@ var R = 80,               // радиус окружности
             a+=da;
         }
         // периодический вызов функции движения 
-        setInterval ("moveElem()", delay);
+        setInterval("moveElem()", delay);
 
         document.onmousemove = function(e) {
             x = e.clientX;
